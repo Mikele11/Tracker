@@ -1,0 +1,53 @@
+<head>
+  <title>Tracker</title>
+</head>
+
+<body>
+    {{> loginButtons}}
+  <h1>Welcome to Tracker!</h1>
+  {{> hello}}
+</body>
+
+<template name="hello">
+<div class="helloMain">
+  <!--
+    <form action="">
+        <input type="button" value="Start" class="start"/> 
+        <input type="button" value="Stop" class="stop"/> 
+            <div class="sw">
+              <p>Hours</p>
+              <p class="hours">00</p>
+            </div>
+             <div class="sw">
+                <p>Minute</p>
+                <p class="mins">00</p>
+            </div>
+             <div class="sw">
+                <p>Sec</p>
+                <p class="secs">00</p>
+            </div>
+    </form>
+  -->
+    <form> 
+      <span>Spend Time</span>
+      <p>Hours</p><input type="number" min="0" max="24" class="timeHouts">
+      <p>Minute</p><input type="number" min="0" max="60" class="timeMinute">
+      <input type="button" value="Save" class="save"/> 
+      <input type="button" value="Show" class="showTime"/> 
+      <p>All spended time</p><span class="allSpendetTime"></span>
+    </form>
+    <form id="proposalForm" action="">
+        <p>Proposal time</p>
+        <input type="number" min="0" max="24" name="proposalTimeH" class="proposalTimeH" placeholder="Enter proposal time Hours">
+        <input type="number" min="0" max="60" name="proposalTimeM" class="proposalTimeM" placeholder="Enter proposal time Minute">
+        <button class="checking">Checking</button>
+        <div class="displayProposal">
+          <p>I need ...></p>
+          <p>Hours</p><p class="pHours"></p>
+          <p>Minute</p><p class="pMinute"></p>
+        </div>
+    </form>
+</div>  
+</template>
+
+
